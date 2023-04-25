@@ -1,13 +1,6 @@
 # Akele-beCar
 
-Pilot
-
-
-Switch to master branch for all the files
-
-# Contents:
-
-### Akele-beCar
+## Contents:
 
 * Description of the hack
 
