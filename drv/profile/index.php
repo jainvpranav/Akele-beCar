@@ -146,8 +146,7 @@
     </div>
   </div>
 </div>
-<!-- partial -->
-           
+<!-- partial -->           
     		</div>
 		</div>
     </div>
@@ -164,6 +163,5 @@
           });
     </script>
     <!-- Analytics -->
-
 	</body>
 </html>
