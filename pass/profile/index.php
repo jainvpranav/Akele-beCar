@@ -2,7 +2,6 @@
   @include('../login/config.php');
   session_start();
   if(isset($_SESSION['uid'])) {
-    // $uid = $_GET['id'];
     $uid=$_SESSION['uid'];
     $a1="SELECT * FROM user WHERE `uid`=$uid;";
     $b1=mysqli_query($conn, $a1);
@@ -11,6 +10,33 @@
     $uemail = $c1['uemail'];
     $uphone=$c1['uphone'];
     $ugender=$c1['ugender'];  
+    $a2="SELECT COUNT(`uid`) FROM notify WHERE `uid`=$uid;";
+    $b2=mysqli_query($conn,$a2);
+    $c2=$b2->fetch_assoc();
+    $rides=$c2['COUNT(`uid`)'];
+    $a3="SELECT * FROM carbon WHERE `uid`=$uid;";
+    $b3=mysqli_query($conn, $a3);
+    $c3=$b3->fetch_assoc();
+    $emission = $c3['emission'];
+    $trees = $c3['trees'];
+    $carbon = $emission + $trees*100;
+    $a4="SELECT tripid FROM notify WHERE `uid`=$uid;";
+    $b4=mysqli_query($conn,$a4);
+    $triparr=array();
+    if(mysqli_num_rows($b4)>0) {
+      while($row = mysqli_fetch_assoc($b4)) { 
+        array_push($triparr, $row);
+      }
+    }
+    $km=0;
+    foreach($triparr as $tripid) {
+      $tripidr=$tripid['tripid'];
+      $a5="SELECT km FROM trip WHERE tripid=$tripidr;";
+      $b5=mysqli_query($conn,$a5);
+      $c5=$b5->fetch_assoc();
+      $kmr=$c5['km'];
+      $km+=$kmr;
+    }
   }
    else {
     echo 'error';
@@ -26,9 +52,8 @@
     <title>User Profile</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/demo.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-light">
@@ -42,14 +67,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                  <a class="nav-link active bold" aria-current="page" href="#">Profile</a>
-              </li>
-              <!-- <li class="nav-item">
-                  <a class="nav-link active bold" aria-current="page" href="./ong.php">Ongoing</a>
+                  <a class="nav-link active bold" aria-current="page" href="../phpfiles/maps.php">Start a Ride</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link active bold" aria-current="page" href="./request.php">Requests</a>
-              </li> -->
+                  <a class="nav-link active bold" aria-current="page" href="../phpfiles/ong.php">Ongoing</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active bold" aria-current="page" href="../phpfiles/request.php">Requested</a>
+              </li>
               <li class="nav-item">
                   <a class="nav-link active bold" aria-current="page" href="../login/logout.php">Logout</a>
               </li>
@@ -99,7 +124,7 @@
               </tr>
               <tr>
                 <th width="30%">Carbon Saved </th>
-                <td><?php echo $carbon; ?></td>
+                <td><?php echo $carbon; ?> Kg</td>
               </tr>
               <tr>
                 <th width="30%">Trees Planted</th>

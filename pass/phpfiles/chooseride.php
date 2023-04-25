@@ -55,7 +55,7 @@
                     <a class="nav-link active bold" aria-current="page" href="./request.php">Requests</a>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link active bold" aria-current="page" href="../lgoin/logout.php">Logout</a>
+                    <a class="nav-link active bold" aria-current="page" href="../login/logout.php">Logout</a>
                 </li>
             </ul>
         </div>

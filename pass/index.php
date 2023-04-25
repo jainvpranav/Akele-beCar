@@ -12,7 +12,7 @@
         $row=$result->fetch_assoc();
         $uid = $row['uid'];
         $_SESSION['uid'] = $uid;
-        header('location:./phpfiles/ong.php');
+        header('location:./profile/index.php');
     } else{
         array_push($error,'incorrect email or password!');
     }
