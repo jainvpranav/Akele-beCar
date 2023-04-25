@@ -135,6 +135,14 @@
           </div>
         </div>
           <div style="height: 26px"></div>
+          <button style="background-color: red !important;
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px;" id="sosButton">
+            SOS
+          </button>
       </div>
     </div>
   </div>
@@ -147,7 +155,15 @@
 </section>
      
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+<script>
+      document.getElementById('sosButton').addEventListener('click', function() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          const {latitude, longitude} = position.coords;
+          //console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+          alert (`Alert signal has been sent from the location: Latitude: ${latitude}, Longitude: ${longitude}`);
+            });
+          });
+    </script>
     <!-- Analytics -->
 
 	</body>
