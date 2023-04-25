@@ -11,8 +11,17 @@ css
   admin page
 }
 
-security
 extra things
 {
   driver profile extra carbon reduced
+}
+
+security
+{
+  - we cannot do screening of drivers as they are also our customers
+  - in app safety measures like share ride details with friend and family
+  - in app safety measures such as customer support
+  - feedback and rating mechanism
+  - Real-time GPS tracking
+  - Partnership with law enforcement
 }
