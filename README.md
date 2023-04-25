@@ -2,7 +2,7 @@
 
 ## Contents:
 
-* ###Description of the hack
+* ### Description of the hack
 
 Creating a website and a android mobile app for implementing the advantageous aspects of Carpooling. 
 
