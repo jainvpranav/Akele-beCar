@@ -7,9 +7,10 @@
         $km= $_COOKIE['km'];
         $kms = str_replace('km','',$km);
         $kmss = (float)$kms;
-      } else {
-        echo 'cookie error';
-      }
+    }
+      // } else {
+      //   echo 'cookie error';
+      // }
       date_default_timezone_set('Asia/Kolkata');
           $datetimelocal1 = date('Y-m-d'); 
           $datetimelocal2 = date('h:i'); 
