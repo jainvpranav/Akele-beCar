@@ -80,6 +80,9 @@
                       <a class="nav-link active bold" aria-current="page" href="../profile/index.php">Profile</a>
                   </li>
                   <li class="nav-item">
+                      <a class="nav-link active bold" aria-current="page" href="../phpfiles/Mapclone.html">Directions</a>
+                  </li>
+                  <li class="nav-item">
                       <a class="nav-link active bold" aria-current="page" href="./ong.php">Ongoing Rides</a>
                   </li>
                   <li class="nav-item">

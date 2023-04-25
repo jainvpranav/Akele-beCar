@@ -67,6 +67,9 @@
                   <a class="nav-link active bold" aria-current="page" href="../phpfiles/maps.php">Start a Ride</a>
               </li>
               <li class="nav-item">
+                  <a class="nav-link active bold" aria-current="page" href="../phpfiles/Mapclone.html">Directions</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link active bold" aria-current="page" href="../phpfiles/ong.php">Ongoing</a>
               </li>
               <li class="nav-item">
