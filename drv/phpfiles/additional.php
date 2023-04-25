@@ -30,7 +30,7 @@
         // echo $result;
         if($result){
             // echo'Done';
-            header('location: ./index.php');
+            header('location: ../index.php');
         } else {
             array_push($error, 'Not unique values');
         }

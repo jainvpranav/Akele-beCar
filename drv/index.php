@@ -13,7 +13,7 @@
       $did = $row['did'];
       // echo $did;
       $_SESSION['did'] = $did;
-      header('location:./phpfiles/ong.php');
+      header('location:./profile/index.php');
     } else{
         array_push($error,'incorrect email or password!');
     }

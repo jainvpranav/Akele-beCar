@@ -37,6 +37,7 @@
       $kmr=$c5['km'];
       $km+=$kmr;
     }
+    $_SESSION['uid']=$uid;
   }
    else {
     echo 'error';

@@ -1,4 +1,5 @@
 <?php
+    @include('../login/config.php');
     session_start();
     if(isset($_COOKIE['src'])) {
         $src= $_COOKIE['src'];
@@ -6,6 +7,8 @@
         $km= $_COOKIE['km'];
         $kms = str_replace('km','',$km);
         $kmss = (float)$kms;
+      } else {
+        echo 'cookie error';
       }
       date_default_timezone_set('Asia/Kolkata');
           $datetimelocal1 = date('Y-m-d'); 
@@ -13,6 +16,10 @@
           $datetimelocal = $datetimelocal1."T".$datetimelocal2;
     if(isset($_SESSION['uid'])) {
       $uid = $_SESSION['uid'];
+      $a1="SELECT ugender FROM user WHERE `uid`=$uid;";
+      $b1=mysqli_query($conn, $a1);
+      $c1=$b1->fetch_assoc();
+      $ugender = $c1['ugender'];
     //   echo $uid;
       if(isset($_POST['submit'])) {
         $datetime = $_POST['datetime'];
@@ -21,8 +28,22 @@
         $_SESSION['km'] = $kmss;
         $_SESSION['date'] = $datetime;
         $_SESSION['uid'] = $uid;
-        header('location:./chooseride.php');
-   }
+        header('location: ./chooseride.php'); 
+      }
+      if(isset($_POST['submit1'])) {
+        if($ugender=='female') {
+          $datetime = $_POST['datetime'];
+          $_SESSION['src'] = $src;
+          $_SESSION['dest'] = $dest;
+          $_SESSION['km'] = $kmss;
+          $_SESSION['date'] = $datetime;
+          $_SESSION['uid'] = $uid;
+          header('location: ./pinkpool.php');
+        } else  {
+          echo "<script>alert('Can\'t Access this option.')</script>";
+        }
+         
+      }
   } else {
     echo 'error';
   }
@@ -121,6 +142,7 @@
         </div>
         <div class="submitbtn">
             <input style="text-align: center;" type="submit" name="submit" id="button" value="Let's find ride" />
+            <input style="text-align: center;" type="submit" name="submit1" id="button" value="Queen Ride" />
           </form>
         </div>
     </div>  
