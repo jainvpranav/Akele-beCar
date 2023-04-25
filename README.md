@@ -26,7 +26,20 @@ One can also use git clone code for the following
 git clone https://github.com/jainvpranav/Akele-beCar/
 ```
 
+Import the SQL file into your Database Management Tool (preferably phpMyAdmin).
+
+Run the index file in your local host.
+
 * ### Libraries and dependencies required for the project
 
 
 * ### Declaration of Previous Work
+
+Basic static carpooling application.
+
+* ### What was accomplished in 24 hours
+
+  - Map integration
+  - Queen's Ride
+  - Profile Page
+  - Carbon-footprint Algorithm
