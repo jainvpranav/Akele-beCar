@@ -8,7 +8,12 @@ Creating a website and a android mobile app for implementing the advantageous as
 
 * ### Tech stack used
   - HTML5
-  - CSS
+  - CSS3
+  - JavaScript
+  - PHP
+  - MySQL
+  - API's
+    - Distance matrix api
 * Installation steps
 * Libraries and dependencies required for the project
 * Declaration of Previous Work
