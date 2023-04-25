@@ -45,3 +45,6 @@ Basic static carpooling application.
   - Queen's Ride
   - Profile Page
   - Carbon-footprint Algorithm
+  - Front-end UI Design for most of the webpages
+  - SOS button for the customers
+  - Progress Bar
