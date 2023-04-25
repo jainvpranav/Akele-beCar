@@ -38,7 +38,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active bold" aria-current="page" href="#">Profile</a>
+                            <a class="nav-link active bold" aria-current="page" href="../profile/index.php">Profile</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active bold" aria-current="page" href="./maps.php">Start a Ride</a>
