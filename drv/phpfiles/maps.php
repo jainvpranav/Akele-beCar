@@ -161,52 +161,7 @@
       console.log('Address of source: ', address1);
       });
         //destination
-      mapboxgl.accessToken = 'pk.eyJ1IjoiYWRtaW5uaW5qYSIsImEiOiJjbGZlNjBiNmswbXpnNDJubTRwMnkydHdrIn0.u_KqBLNcOkfBU5ithnA7LA';
-      const map2 = new mapboxgl.Map({
-          container: 'map2',
-          // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-          style: 'mapbox://styles/mapbox/streets-v12',
-          center: [77.5946,12.9716],
-          zoom: 13
-      });
-
-      const geocoder2 = new MapboxGeocoder({
-          accessToken: mapboxgl.accessToken,
-          marker: {
-              color: 'orange'
-          },
-          mapboxgl: mapboxgl
-      });
-
-      map2.addControl(geocoder2);
-      geocoder2.on('result', function(e) {
-        // const location = e.result.center;
-      address2 = e.result.text;
-        //   console.log('Location:', location);
-      console.log('Address of destination: ', address2);
-      if(address1!= null && address2!= null){
-          axios.get('https://api.distancematrix.ai/maps/api/distancematrix/json',{
-      params:{
-          origins:address1,
-          destinations:address2,
-          key:"w5XckH8qUhTKqkdLbfS7QEIcado9J",
-          region:'IN',
-      }
-      }).then(function(response){
-            var distanceinkms=response.data.rows[0].elements[0].distance.text;
-            document.getElementById('output1').innerHTML= distanceinkms;
-            var duration=response.data.rows[0].elements[0].duration.text;
-            document.getElementById('output2').innerHTML= duration;
-          //    document.cookie = "address1php = " + address1 + address2 + distanceinkms ;
-            document.cookie = "src = " + address1 ;
-            document.cookie = "dest = " + address2  ;
-            document.cookie = "km = " + distanceinkms ;
-            
-      }).catch(function(err){
-      });
-          }
-      });
-
+      
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
