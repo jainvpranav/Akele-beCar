@@ -6,7 +6,11 @@
 
 Creating a website and a android mobile app for implementing the advantageous aspects of Carpooling. 
 
-* ###Tech stack used
+* ### Tech stack used
+
+```
+* HTML5
+```
 
 * Installation steps
 * Libraries and dependencies required for the project
