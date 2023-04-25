@@ -18,8 +18,13 @@ Creating a website and a android mobile app for implementing the advantageous as
 
 * ### Installation steps
 
+Download the [github repository](https://github.com/jainvpranav/Akele-beCar/) which will download a zip file of the project. 
 
+One can also use git clone code for the following
 
+'''
+git clone https://github.com/jainvpranav/Akele-beCar/
+'''
 * ### Libraries and dependencies required for the project
 
 
