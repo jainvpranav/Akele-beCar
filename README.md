@@ -22,9 +22,10 @@ Download the [github repository](https://github.com/jainvpranav/Akele-beCar/) wh
 
 One can also use git clone code for the following
 
-'''
+```
 git clone https://github.com/jainvpranav/Akele-beCar/
-'''
+```
+
 * ### Libraries and dependencies required for the project
 
 
