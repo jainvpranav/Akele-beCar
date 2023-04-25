@@ -1,15 +1,11 @@
 git
-{
-driver (12:10)
-pass (3:00)
-}
 
 profile
 {
-pass
 driver
 }
 
+readme
 carbon correction
 pink pool
 dashboard changes
