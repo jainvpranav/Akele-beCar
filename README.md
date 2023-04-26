@@ -32,7 +32,16 @@ Run the index file in your local host.
 
 * ### Libraries and dependencies required for the project
 
-  - 
+* Front-end:
+ - Axios -> to make HTTP requests from the browser and handle the transformation of request and response data
+ - Bootstrap -> for styling and UI components
+ - Mapbox GL JS -> for displaying maps and markers
+ - Mapbox Geocoding API -> for converting addresses to coordinates
+ - Mapbox Distance Matrix API -> for calculating distances and durations between points
+ 
+Back-end:
+
+ - PHP MySQLi -> for interacting with MySQL database
 
 
 * ### Declaration of Previous Work
