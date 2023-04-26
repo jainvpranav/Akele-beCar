@@ -17,7 +17,7 @@ Creating a website and a android mobile app for implementing the advantageous as
     - [MapBox API](https://www.mapbox.com/)
 
 * ### Installation steps
-
+All files are in the master branch
 Download the [github repository](https://github.com/jainvpranav/Akele-beCar/archive/refs/heads/main.zip) which will download a zip file of the project. 
 
 One can also use git clone code for the following
