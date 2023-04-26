@@ -57,4 +57,4 @@ Basic static carpooling application.
   - Carbon-footprint Algorithm
   - Front-end UI Design for most of the webpages
   - SOS button for the customers
-  - Progress Bar
+  - Progress 
