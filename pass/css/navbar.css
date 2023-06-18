@@ -1,0 +1,41 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar-toggler {
+    background-color: whitesmoke;
+}
+ .nav-link, .active {
+    /* color: rgb(126, 123, 123) !important; */
+    padding: 5px;
+}
+.navbar-brand {
+    color: black !important;
+    padding: 5px;
+}
+nav {
+    top: 0;
+    position: sticky !important;
+    padding: 10px;
+    margin: 0%;
+    z-index: 1;
+    width: 100%;
+}
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+nav {
+    animation: fadeEffect 2s;
+  }
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .nav-link:hover {
+    color: rgb(126, 123, 123) !important;
+  }
