@@ -11,5 +11,7 @@
         $sel1="UPDATE vacancy SET available=available+1 where available<=vacancy and did=$did;";
         $res1=mysqli_query($conn, $sel1);
         header('location:./ong.php');
+    }else {
+        echo "<script>alert('Something went wrong')</script>";
     }
 ?>
